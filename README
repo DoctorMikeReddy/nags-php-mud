@@ -1,0 +1,455 @@
+/*===== This is a work in progress =====*\
+/*============================================================================*\
+|	NAGS - an AMP (Apache, MySql and PHP) backed mud system
+|	by Terry Valladon
+|
+|	Copyright (C) 2007-2010 by Terry Valladon (get-nags@terryvalladon.com)
+|
+|	This program is free software
+|	you can redistribute it and/or modify
+|	it under the terms of the GNU General Public License as published by
+|	the Free Software Foundation; either version 2, or (at your option)
+|	any later version.
+|
+|	This program is distributed in the hope that it will be useful,
+|	but WITHOUT ANY WARRANTY; without even the implied warranty of
+|	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+|	GNU General Public License for more details.
+|
+|	You should have received a copy of the GNU General Public License
+|	along with this program; if not, write to the Free Software
+|	Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+|
+\*============================================================================*/
+
+Requirements:
+			php5 CLI
+			MySql
+			Linux OS (Mac BSD support is unknown at this time)
+
+Notes:
+			Due to how sockets are used this system can not be used under a windows host.
+
+Database Defaults:
+			Database Name:		nags
+			Database User name:	nags
+			Database Password:	password
+			
+Account Defaults:
+			***** Change these before you put your system online to public access!!!! *****
+			admin/password
+			guest/password
+			builder/password
+			headbuilder/password
+
+Install Instructions:
+			By whatever means get the files onto the file system (svn, git, unzip, tarball)
+			Create a database.
+			Create a database user.
+			Grant access rights for user to database.
+			Import nags.sql file into database
+			Modify config.php file to set Database Host, Database User, Database Password, Database Name, IP Address, Port and Server Name
+Running Instructions:
+			Run the server using either: ./autorun or php ./nags.php
+				Running the server with php ./nags.php will dump all logging information to the console screen and will not restart if the game
+					server crashes or a "reboot" command is issued.
+				Running the server with ./autorun will dump all logging information to the syslog file and WILL restart if the game crashes or
+					a "reboot" command is issued.
+Access Instructions:
+			Access the server using telnet to the proper ipaddress and port.
+			See the account defaults for login and password information unless you have changed this in your database.
+Current Commands:
+			Alias:
+					Requires:
+						
+					Options:
+						None.
+					Notes:
+						Shows loaded aliases.
+					Output:
+						Loaded Aliases:
+						        CLS     =>      CLEAR
+						        D       =>      DOWN
+						        E       =>      EAST
+						        GO      =>      GOTO
+						        ?       =>      HELP
+						        L       =>      LOOK
+						        N       =>      NORTH
+						        NE      =>      NORTHEAST
+						        NW      =>      NORTHWEST
+						        '       =>      SAY
+						        S       =>      SOUTH
+						        SE      =>      SOUTHEAST
+						        SW      =>      SOUTHWEST
+						        U       =>      UP
+						        W       =>      WEST
+						        !       =>      YELL
+			Build:
+					Requires:
+						
+					Options:
+						None.
+					Notes:
+						Displays zone you are assigned to build in.
+					Output:
+						You are allowed to build in zone: 2 `A New Zone`
+						Highest room in zone 2 is: 0000
+			Clear:
+					Requires:
+						
+					Options:
+						None.
+					Notes:
+						Clears the screen.
+					Output:
+						Ansi clear screen command, only supported on Ansi terminals
+			Close:
+					Requires:
+						
+					Options:
+						<object><door>
+						<direction of door>
+					Notes:
+						Close an object or door.
+					Output:
+						> close door north
+						The door is now closed.
+						> Close chest
+						The old wooden chest is now closed.
+			Commands:
+					Requires:
+						
+					Options:
+						None.
+					Notes:
+						Lists the commands available for the player
+					Output:
+						Loaded Commands:
+						ALIAS, BUILD, CLEAR, CLOSE, COMMANDS, DOWN, EAST, EXITS, GOTO, HELP, LOCK
+						LOGOUT, LOOK, NORTH, NORTHEAST, NORTHWEST, OPEN, QUIT, REBOOT, REDIT, SAY, SHOUT
+						SOCIALS, SOUTH, SOUTHEAST, SOUTHWEST, TEMPLATE, UNLOCK, UP, WEST, WHO, YELL,
+			Connections:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Down:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			East:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Exits:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Goto:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Help:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Lock:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Logout:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Look:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			North:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Northeast:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Northwest:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Open:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Pedit:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Pflags:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Plist:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Pstat:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Quit:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Reboot:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Redit:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Rlist:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Say:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Shout:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Shutdown:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Socials:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			South:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Southeast:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Southwest:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Template:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Unlock:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Up:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Users:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			West:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Who:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Yell:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			Zlist:
+					Requires:
+						
+					Options:
+						
+					Notes:
+						
+					Output:
+						
+			

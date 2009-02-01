@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: nags
 -- ------------------------------------------------------
--- Server version	5.0.38-Ubuntu_0ubuntu1.1-log
+-- Server version	5.0.45-Debian_1ubuntu3.4-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -46,8 +46,8 @@ INSERT INTO `exits` VALUES (1,1,1,'NO',1,2,1,1,0,NULL,0,0);
 INSERT INTO `exits` VALUES (3,1,1,'SO',0,0,1,0,0,NULL,0,0);
 INSERT INTO `exits` VALUES (4,0,0,'NO',1,1,1,0,0,NULL,0,0);
 INSERT INTO `exits` VALUES (5,1,2,'SO',1,1,1,1,0,NULL,0,0);
-INSERT INTO `exits` VALUES (6,1,1,'NE',1,4,1,0,1,NULL,0,0);
-INSERT INTO `exits` VALUES (7,1,4,'SW',1,1,1,0,1,NULL,0,0);
+INSERT INTO `exits` VALUES (6,1,1,'NE',1,4,1,0,0,NULL,0,0);
+INSERT INTO `exits` VALUES (7,1,4,'SW',1,1,1,0,0,NULL,0,0);
 /*!40000 ALTER TABLE `exits` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -184,8 +184,8 @@ CREATE TABLE `players` (
 
 LOCK TABLES `players` WRITE;
 /*!40000 ALTER TABLE `players` DISABLE KEYS */;
-INSERT INTO `players` VALUES (000000000001,'Admin','5f4dcc3b5aa765d61d8327deb882cf99','Admin','Account','admin@mydomain.com','m',0,0002,0000);
-INSERT INTO `players` VALUES (000000000002,'guest','5f4dcc3b5aa765d61d8327deb882cf99','Guest','Account','guest@mydomain.com','m',0,0001,0001);
+INSERT INTO `players` VALUES (000000000001,'Admin','5f4dcc3b5aa765d61d8327deb882cf99','Admin','Account','admin@mydomain.com','m',0,0000,0000);
+INSERT INTO `players` VALUES (000000000002,'guest','5f4dcc3b5aa765d61d8327deb882cf99','Guest','Account','guest@mydomain.com','M',0,0001,0001);
 INSERT INTO `players` VALUES (000000000004,'builder','5f4dcc3b5aa765d61d8327deb882cf99','Builder','Account','builder@mydomain.com','F',0,0002,0000);
 INSERT INTO `players` VALUES (000000000005,'headbuilder','5f4dcc3b5aa765d61d8327deb882cf99','Head','Builder','headbuilder@mydomain.com','m',0,0000,0000);
 /*!40000 ALTER TABLE `players` ENABLE KEYS */;
@@ -215,11 +215,11 @@ CREATE TABLE `rooms` (
 
 LOCK TABLES `rooms` WRITE;
 /*!40000 ALTER TABLE `rooms` DISABLE KEYS */;
-INSERT INTO `rooms` VALUES (00000001,0000,0000,'Purgatory','A black abyss streaching as far as the eye can see in all directions. Nothing to do here but WAIT!',NULL);
-INSERT INTO `rooms` VALUES (00000002,0001,0001,'A Rancid Pit.','A liquid-filled pit extends to every wall of this chamber. The liquid lies about 10 feet below your feet and is so murky that you can\'t see its bottom. The room smells sour. A rope bridge extends from your door to the room\'s other exit.\n',NULL);
-INSERT INTO `rooms` VALUES (00000003,0002,0001,'The Bone Keeper','You gaze into the room and hundreds of skulls gaze coldly back at you. They\'re set in niches in the walls in a checkerboard pattern, each skull bearing a half-melted candle on its head. The grinning bones stare vacantly into the room, which otherwise seems empty.',NULL);
+INSERT INTO `rooms` VALUES (00000001,0000,0000,'Purgatory','You stand before a black abyss streaching in all directions for as far as you\ncan see. The hard, heat cracked mud shows no sign of footprints. Nothing do do\nhere but wait.',NULL);
+INSERT INTO `rooms` VALUES (00000002,0001,0001,'A Rancid Pit.','A liquid-filled pit extends to every wall of this chamber. The liquid lies about\n10 feet below your feet and is so murky that you can\'t see its bottom. The room\nsmells sour. A rope bridge extends from your door to the room\'s other exit.',NULL);
+INSERT INTO `rooms` VALUES (00000003,0002,0001,'The Bone Keeper','You gaze into the room and hundreds of skulls gaze coldly back at you. They\'re\nset in niches in the walls in a checkerboard pattern, each skull bearing a\nhalf-melted candle on its head. The grinning bones stare vacantly into the room,\nwhich otherwise seems empty.',NULL);
 INSERT INTO `rooms` VALUES (00000004,0003,0001,'A really really really reallyreally really really reallyreally really really rea','not much here',NULL);
-INSERT INTO `rooms` VALUES (00000005,0004,0001,'A small chamber','This small chamber seems divided into three parts. The first has several hooks on the walls from which hang dusty robes. An open curtain separates that space from the next, which has a dry basin set in the floor. Beyond that lies another parted curtain behind which you can see several straw mats in a semicircle pointing toward a statue of a dog-headed man.',NULL);
+INSERT INTO `rooms` VALUES (00000005,0004,0001,'A small chamber','This small chamber seems divided into three parts. The first has several hooks\non the walls from which hang dusty robes. An open curtain separates that space\nfrom the next, which has a dry basin set in the floor. Beyond that lies another\nparted curtain behind which you can see several straw mats in a semicircle\npointing toward a statue of a dog-headed man.',NULL);
 INSERT INTO `rooms` VALUES (00000017,0000,0002,'A new room','This is a sample room description.\n',NULL);
 /*!40000 ALTER TABLE `rooms` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -337,4 +337,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2008-06-19 23:31:48
+-- Dump completed on 2009-02-01  6:14:11

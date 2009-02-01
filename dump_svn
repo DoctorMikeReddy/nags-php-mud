@@ -1,0 +1,2 @@
+#!/bin/sh
+svn log > ../http/data/pages/svn_log.txt

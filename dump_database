@@ -1,0 +1,2 @@
+#!/bin/sh
+mysqldump -u nags -ppassword --opt --skip-extended-insert --skip-quick nags > database/nags.sql

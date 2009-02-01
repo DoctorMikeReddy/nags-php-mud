@@ -1,0 +1,24 @@
+#!/bin/sh
+while ( : ) do
+
+	DATE=`date`
+	echo "autorun starting game $DATE" >> syslog
+	echo "running nags.php" >> syslog
+
+	./nags.php --qd
+
+	if [ -r .shutdown ]; then
+		DATE=`date`;
+		echo "autoscript killed $DATE" >> syslog
+		rm .shutdown
+		exit
+ 	fi
+
+	if [ ! -r .reboot ]; then
+		sleep 60
+	else
+		rm .reboot
+	fi
+
+	sleep 5
+done

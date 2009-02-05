@@ -29,6 +29,7 @@ Requirements:
 
 Notes:
 			Due to how sockets are used this system can not be used under a windows host.
+			This is a console mode application and will not run under Apache.
 
 Database Defaults:
 			Database Name:		nags
